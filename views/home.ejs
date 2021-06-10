@@ -1,0 +1,108 @@
+
+<%- include("partials/header"); -%>
+ <main>
+        <!-- Interview -->
+        <header class="header" >
+            <h1>Interview Creation Portal </h1>
+        </header>
+
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Schedule an Interview</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Interviewer Name</label>
+                            <select class="form-control"  name="interviewer-name" id="interviewer-name">
+                            </select>
+                            <!-- <input type="text" class="form-control" name="interviewer-name" id="interviewer-name"/> -->
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Interviewee Name</label>
+                            <select class="form-control"  name="interviewer-name" id="interviewee-name">
+                            </select>
+                          <!-- <input type="text" class="form-control" name="interviewee-name" id="interviewee-name"/> -->
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <label class="control-label">Start Time</label>
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" id = "start-time" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <label class="control-label">End Time</label>
+                                <div class='input-group date' id='datetimepicker2'>
+                                    <input type='text' class="form-control" id="end-time"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="submit-btn" class="btn btn-primary">Schedule</button>
+                </div>
+            </div>
+        </div>
+        <header class="header" >
+            <h3> Upcoming Interviews </h3>
+        </header>
+        <div class="container">
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>InterViewer</th>
+                <th>Interviewee</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+
+
+        <section hidden id="update-row">
+        <div class="container">
+            <div class="row">
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label class="control-label">Start Time</label>
+                        <div class='input-group date' id='datetimepickerUpdate1'>
+                            <input type='text' class="form-control" id = "start-time-updated" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label class="control-label">End Time</label>
+                        <div class='input-group date' id='datetimepickerUpdate2'>
+                            <input type='text' class="form-control" id="end-time-updated"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="update-row-btn" class="btn btn-primary">Update Interview</button>
+        </div>
+        </section>
+    </main>
+<%- include("partials/footer"); -%>
