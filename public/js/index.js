@@ -138,12 +138,21 @@ submitButton.onclick = function () {
     const startTime = document.querySelector("#start-time").value;
     const endTime = document.querySelector("#end-time").value;
 
-    //console.log(email1, email2, startTime,endTime);
 
     if(email1 === email2) {
         alert("Interviewer and Interviewee cannot be same");
         return;
     }
+    if(email1 === ""){
+    alert("Please enter Interviewer");
+    return ;
+  }
+
+  if(email2 === ""){
+  alert("Please enter Interviewee");
+  return ;
+}
+
     if(startTime === "" || endTime === "") {
         alert("Select Date and Time");
         return;
@@ -156,7 +165,8 @@ submitButton.onclick = function () {
         body: JSON.stringify({ email1: email1,
                                email2 : email2,
                                startTime : startTime,
-                               endTime : endTime})
+                               endTime : endTime
+                                })
     })
     .then(response => response.json())
     .then(data => insertRowIntoInterviewTable(data['data']));

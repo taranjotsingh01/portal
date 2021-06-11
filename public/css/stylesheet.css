@@ -13,7 +13,7 @@ main {
 
 .header {
     position: relative;
-    margin-bottom: 1 rem;
+    margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #ccc;
 }
@@ -38,4 +38,3 @@ th, td {
 .btn-primary {
     width: 100%;
 }
-
